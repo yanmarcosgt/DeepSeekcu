@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Virtual - Pagos en Línea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Tienda Virtual</h1>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#pagos">Pagos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-container">
+      <div class="producto">
+        <img src="https://via.placeholder.com/150" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Precio: $10.00</p>
+        <button onclick="mostrarPago('Producto 1', 10)">Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/150" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Precio: $20.00</p>
+        <button onclick="mostrarPago('Producto 2', 20)">Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/150" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Precio: $30.00</p>
+        <button onclick="mostrarPago('Producto 3', 30)">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="pagos">
+    <h2>Opciones de Pago</h2>
+    <div id="pago-container" class="oculto">
+      <h3>Detalles del Pago</h3>
+      <p id="detalle-pago"></p>
+      <h4>Código QR para Pago</h4>
+      <div id="qr-code"></div>
+      <h4>Pasarelas de Pago</h4>
+      <div class="pasarelas">
+        <button class="pasarela-btn">PayPal</button>
+        <button class="pasarela-btn">Stripe</button>
+        <button class="pasarela-btn">MercadoPago</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>Contacto: info@tiendavirtual.com | Teléfono: +123456789</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
