@@ -1,0 +1,18 @@
+// Función para mostrar el contenedor de pago
+function mostrarPago(nombreProducto, precio) {
+  const pagoContainer = document.getElementById('pago-container');
+  const detallePago = document.getElementById('detalle-pago');
+  const qrCodeContainer = document.getElementById('qr-code');
+
+  // Mostrar detalles del pago
+  detallePago.textContent = `Producto: ${nombreProducto} - Precio: $${precio}`;
+  pagoContainer.classList.remove('oculto');
+  pagoContainer.classList.add('visible');
+
+  // Generar código QR
+  qrCodeContainer.innerHTML = ''; // Limpiar contenido anterior
+  QRCode.toCanvas(qrCodeContainer, `https://ejemplo.com/pago?producto=${nombreProducto}&precio=${precio}`, function (error) {
+    if (error) console.error(error);
+    console.log('Código QR generado');
+  });
+}
